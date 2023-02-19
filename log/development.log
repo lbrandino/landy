@@ -1,0 +1,9 @@
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "landy_development" ENCODING = 'unicode'[0m
+  [1m[35m (83.6ms)[0m  [1m[35mCREATE DATABASE "sofi_api_test" ENCODING = 'unicode'[0m
+Started GET "/" for 192.168.32.1 at 2023-02-19 16:56:40 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.4.2/libtemplates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.4.2/libtemplates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 582)
+Completed 200 OK in 15ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4651)
+
+

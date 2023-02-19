@@ -1,0 +1,33 @@
+version: '3'
+services:
+  db:
+    image: postgres:14.2-alpine
+    container_name: landy-postgres-14.2
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./dumps:/dumps
+    command:
+      "postgres -c 'max_connections=500'"
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+  web:
+    build: .
+    command: bash -c 'rm -f tmp/pids/server.pid && bin/dev'
+    stdin_open: true
+    tty: true
+    env_file:
+      - .env
+    volumes:
+      - app-storage:/rails/storage
+      - .:/rails
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+
+volumes:
+  bundle_cache:
+  postgres_data: {}
+  app-storage: {}
