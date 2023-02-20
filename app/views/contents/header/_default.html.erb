@@ -1,0 +1,7 @@
+<% image = content.components[0].element %>
+<% button = content.components[1].element %>
+
+<%= content_tag :div, class: classes_for(content) do %>
+  <%= render image, image: image %>
+  <%= render button, button: button %>
+<% end %>

@@ -1,0 +1,9 @@
+<% h1 = content.components[0].element %>
+<% h2 = content.components[1].element %>
+<% button = content.components[2].element %>
+
+<%= content_tag :div, class: classes_for(content) do %>
+  <%= render h1, h1: h1 %>
+  <%= render h2, h2: h2 %>
+  <%= render button, button: button %>
+<% end %>

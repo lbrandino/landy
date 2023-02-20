@@ -1,0 +1,5 @@
+<div class="w-full h-max flex flex-col">
+  <% @page.contents.each do |content| %>
+    <%= render content.partial, content: content %>
+  <% end %>
+</div>
