@@ -3,7 +3,8 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   purge: {
     safelist: [
-      { pattern: /./ }
+      { pattern: /./ },
+      { pattern: /hover:./ },
     ],
   },
   content: [

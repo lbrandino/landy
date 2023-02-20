@@ -4,6 +4,6 @@ module PagesHelper
   def classes_for element, extras=""
     KEYS.map do |key|
       element.options.fetch(key, nil)
-    end.join(" ") + extras
+    end.join(" ").squish + " #{extras}"
   end
 end

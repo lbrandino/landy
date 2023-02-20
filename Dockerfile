@@ -20,7 +20,7 @@ RUN apt-get update -qq && \
     apt-get install -y build-essential default-libmysqlclient-dev git libpq-dev libvips pkg-config redis bash bash-completion libffi-dev tzdata postgresql nodejs npm yarn
 
 # Install application gems
-COPY Gemfile ./
+COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
 # Copy application code
