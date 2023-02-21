@@ -18,6 +18,7 @@ gem 'stimulus-rails'
 gem 'tailwindcss-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[windows jruby]
+gem 'undraw'
 
 group :development, :test do
   gem 'brakeman'
